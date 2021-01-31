@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "c92f3525-fe86-44f2-be74-8cbe56f80220",
+		"name": "JAZ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ServerSideRequests",
+			"item": [
+				{
+					"name": "GetTrainByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/trains/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"trains",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTrainList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/trains",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"trains"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateTrain",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"station\": {\"id\":\"3\"},\n    \"direction\": \"1\",\n    \"cooldown\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/trains",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"trains"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModifyTrain",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"3\",\n    \"cooldown\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/trains",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"trains"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTrain",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/trains/3",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"trains",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompartmentList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/compartments",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"compartments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompartmentByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/compartments/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"compartments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCompartment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"train\": {\"id\": \"1\"},\n    \"size\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/compartments",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"compartments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModifyCompartment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1\",\n    \"size\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/compartments",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"compartments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCompartment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/compartments/9",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"compartments",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MoveTrains",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/move",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"move"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClientSideRequests",
+			"item": [
+				{
+					"name": "GetTrains",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trains",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trains"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompartment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/compartments/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compartments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTrainByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/trains/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trains",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

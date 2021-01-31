@@ -1,0 +1,25 @@
+version: '3'
+services:
+  simulator:
+    build: ./simulator
+    ports:
+      - "9000:9000"
+    restart: on-failure:5
+    depends_on:
+      - traindb
+  client:
+    build: ./client
+    ports:
+      - "8080:8080"
+    depends_on:
+      - simulator
+  traindb:
+    build: ./db
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pwd
+      MYSQL_DATABASE: traincontrol
+      MYSQL_USER: traincontroller
+      MYSQL_PASSWORD: pwd

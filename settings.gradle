@@ -1,0 +1,4 @@
+rootProject.name = 'first_project'
+
+include 'client'
+include 'simulator'

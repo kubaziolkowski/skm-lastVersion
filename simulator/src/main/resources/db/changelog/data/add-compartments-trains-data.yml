@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id:  2020_12_13-insert-initial-data-trains-compartments-relation
+      author:  kuba.ziolkowski
+      changes:
+        - sqlFile:
+            splitStatements: true
+            stripComments: true
+            path: db/changelog/data/sql/insert-trains-compartment-relation.sql
+

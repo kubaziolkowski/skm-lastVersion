@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id:  2020_12_10-insert-initial-data-compartments
+      author:  kuba.ziolkowski
+      changes:
+        - sqlFile:
+            splitStatements: true
+            stripComments: true
+            path: db/changelog/data/sql/insert-compartments.sql
